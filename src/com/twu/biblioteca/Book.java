@@ -13,10 +13,12 @@ public class Book {
         publicationDate = year;
     }
 
+    public int getRef() {
+        return ref;
+    }
+
     public String getBookInfo() {
         return Integer.toString(ref) + ", " + title + ", " + author + ", " + Integer.toString(publicationDate);
     }
-
-
 
 }
