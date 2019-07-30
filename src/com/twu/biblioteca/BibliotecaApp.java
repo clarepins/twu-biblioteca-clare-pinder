@@ -8,5 +8,7 @@ public class BibliotecaApp {
         libraryInventory.addBook(2, "Everything is everything", "Lauren Hill", 2001 );
         libraryInventory.addBook(3, "Glasshouses", "Maribou State", 2019 );
         libraryInventory.printAvailableBooks();
+        Menu menu = new Menu(libraryInventory, System.out);
+        menu.printMenuOptions();
     }
 }

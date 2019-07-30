@@ -5,9 +5,11 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.mockito.Mockito.verify;
+
 import java.io.PrintStream;
-import static org.mockito.Mockito.*;
-public class LibraryInventoryTest {
+
+public class MenuTest {
 
     @Before
     public void init() {
@@ -18,13 +20,11 @@ public class LibraryInventoryTest {
     PrintStream mockPrintStream;
 
     @Test
-    public void shouldAddBooksToInventoryAndPrint() {
+    public void shouldPrintMenuOptions() {
         LibraryInventory libraryInventory = new LibraryInventory(mockPrintStream);
-        libraryInventory.addBook(1, "title1", "author1", 1990);
-        libraryInventory.addBook(2, "title2", "author2", 1990);
-        libraryInventory.printAvailableBooks();
-        verify(mockPrintStream).println("1, title1, author1, 1990\n2, title2, author2, 1990");
+        Menu menu = new Menu(libraryInventory, mockPrintStream);
+        menu.printMenuOptions();
+        String menuOptions = "\nBibliotecaApp menu - please select a number.\n1. List of books";
+        verify(mockPrintStream).println(menuOptions);
     }
-
-
 }
