@@ -4,7 +4,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class LibraryInventory {
-    ArrayList<Book> availableBooks = new ArrayList<Book>();
+    ArrayList<Book> availableBooks = new ArrayList();
     private PrintStream printStream;
 
     public LibraryInventory(PrintStream printStream) {
@@ -17,6 +17,9 @@ public class LibraryInventory {
     }
 
     public void printAvailableBooks() {
-        printStream.println(availableBooks.get(0).getBookInfo());
+        ArrayList<String> bookInfoList = new ArrayList();
+        availableBooks.forEach(book -> bookInfoList.add(book.getBookInfo()));
+        String output = String.join("\n", bookInfoList);
+        printStream.println(output);
     }
 }

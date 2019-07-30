@@ -18,7 +18,7 @@ public class Book {
     }
 
     public String getBookInfo() {
-        return Integer.toString(ref) + ", " + title + ", " + author + ", " + Integer.toString(publicationDate);
+        return ref + ", " + title + ", " + author + ", " + publicationDate;
     }
 
 }
