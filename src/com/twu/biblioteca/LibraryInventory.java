@@ -1,0 +1,22 @@
+package com.twu.biblioteca;
+
+import java.io.PrintStream;
+import java.util.ArrayList;
+
+public class LibraryInventory {
+    ArrayList<Book> availableBooks = new ArrayList<Book>();
+    private PrintStream printStream;
+
+    public LibraryInventory(PrintStream printStream) {
+        this.printStream = printStream;
+    }
+
+    public void addBook(int ref, String title, String author, int publicationDate) {
+        Book book = new Book(ref, title, author, publicationDate);
+        availableBooks.add(book);
+    }
+
+    public void printAvailableBooks() {
+        printStream.println(availableBooks.get(0).getBookInfo());
+    }
+}

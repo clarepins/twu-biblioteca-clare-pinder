@@ -6,6 +6,8 @@ import static org.junit.Assert.assertEquals;
 
 public class BookTest {
 
+    //@Before
+
     @Test
     public void testGetRefShouldReturnRef() {
         Book book = new Book (3, "Glasshouses", "Maribou State", 2019);
