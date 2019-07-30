@@ -1,23 +1,28 @@
 package com.twu.biblioteca;
 
 
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.*;
 
 public class BookTest {
+    private Book book;
 
-    //@Before
-
-    @Test
-    public void testGetRefShouldReturnRef() {
-        Book book = new Book (3, "Glasshouses", "Maribou State", 2019);
-        assertEquals(book.getRef(), 3);
+    @Before
+    public void setUp() throws Exception {
+        book = new Book(3, "Glasshouses", "Maribou State", 2019);
     }
 
     @Test
-    public void testGetBookInfoShouldReturnBookInfo() {
-        Book book = new Book (3, "Glasshouses", "Maribou State", 2019);
-        assertEquals(book.getBookInfo(), "3, Glasshouses, Maribou State, 2019");
+    public void ShouldReturnRef() {
+        assertThat(book.getRef(), is(3));
+    }
+
+    @Test
+    public void ShouldReturnBookInfo() {
+        assertThat(book.getBookInfo(), is("3, Glasshouses, Maribou State, 2019"));
     }
 
 }
