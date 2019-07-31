@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
 public class LibraryInventoryTest {
 
     @Test
-    public void shouldAddBooksToInventoryAndPrint() {
+    public void shouldAddBooksToInventory() {
         Book book = new Book(1, "title1", "author1", 1990);
         Book book2 = new Book(2, "title2", "author2", 1990);
         LibraryInventory libraryInventory = new LibraryInventory();

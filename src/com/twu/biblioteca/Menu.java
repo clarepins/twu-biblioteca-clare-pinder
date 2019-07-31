@@ -12,4 +12,13 @@ public class Menu {
     public String getMenuOptions() {
         return menuOptions;
     }
+
+    public String selectMenuOption(int menuChoice) {
+        String menuAction = "";
+        if (menuChoice == 1) {
+            menuAction = libraryInventory.getAvailableBooks();
+        }
+        return menuAction;
+
+    }
 }
