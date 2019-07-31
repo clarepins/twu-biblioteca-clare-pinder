@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
 public class LibraryInventory {
@@ -20,33 +21,35 @@ public class LibraryInventory {
         return String.join("\n", bookInfoList);
     }
 
-    public String checkOutBook(int bookRef) { // had to use weird Iterator syntax to avoid ConcurrentModificationException
-        Iterator<Book> iterator = availableBooks.iterator();
+    public String checkOutBook(int bookRef) {
         String checkOutMessage = "";
-        while (iterator.hasNext()) {
-            Book book = iterator.next();
-
-            if (book.getRef() == bookRef) { // maybe build a method that takes listToAddTo and listToRemoveFrom
-                iterator.remove();
-                checkedOutBooks.add(book);
-                checkOutMessage = "Thank you! Enjoy the book";
-            }
+        if (switchBookLists(bookRef, availableBooks, checkedOutBooks)) {
+            checkOutMessage = "Thank you! Enjoy the book";
         }
         return checkOutMessage;
     }
 
     public String checkInBook(int bookRef) {
-        Iterator<Book> iterator = checkedOutBooks.iterator();
         String checkInMessage = "";
+        if (switchBookLists(bookRef, checkedOutBooks, availableBooks)) {
+            checkInMessage = "Thank you for returning the book";
+        }
+        return checkInMessage;
+    }
+
+    private Boolean switchBookLists(int bookRef, ArrayList<Book> leavingList, ArrayList<Book> joiningList) {
+//        had to use weird Iterator syntax to avoid ConcurrentModificationException
+        Iterator<Book> iterator = leavingList.iterator();
+        Boolean successfulOperation = false;
         while (iterator.hasNext()) {
             Book book = iterator.next();
 
-            if (book.getRef() == bookRef) { // maybe build a method that takes listToAddTo and listToRemoveFrom
+            if (book.getRef() == bookRef) {
                 iterator.remove();
-                availableBooks.add(book);
-                checkInMessage = "Thank you for returning the book";
+                joiningList.add(book);
+                successfulOperation = true;
             }
         }
-        return checkInMessage;
+        return successfulOperation;
     }
 }
