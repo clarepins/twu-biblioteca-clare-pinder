@@ -37,6 +37,11 @@ public class MenuTest {
         libraryInventory.addBook(book2);
     }
 
+    private void provideInput(String data) {
+        testIn = new ByteArrayInputStream(data.getBytes());
+        System.setIn(testIn);
+    }
+
     @After
     public void restoreSystemInputOutput() {
         System.setIn(systemIn);
@@ -67,21 +72,18 @@ public class MenuTest {
     @Test
     public void shouldCheckOutBookWhenOption2IsSelected() {
         String userInput = "1";
-        testIn = new ByteArrayInputStream(userInput.getBytes());
-        System.setIn(testIn);
+        provideInput(userInput);
         assertThat(menu.selectMenuOption(2), is("Thank you! Enjoy the book"));
     }
 
     @Test
     public void shouldCheckInBookWhenOption3IsSelected() {
         String userInput = "1";
-        testIn = new ByteArrayInputStream(userInput.getBytes());
-        System.setIn(testIn);
+        provideInput(userInput);
         menu.selectMenuOption(2);
 
         String userInput2 = "1";
-        testIn = new ByteArrayInputStream(userInput2.getBytes());
-        System.setIn(testIn);
+        provideInput(userInput2);
         assertThat(menu.selectMenuOption(3), is("Thank you for returning the book"));
     }
 }

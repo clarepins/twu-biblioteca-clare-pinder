@@ -7,9 +7,8 @@ public class BibliotecaApp {
         return welcomeMessage;
     }
 
-
-
     public static void main(String[] args) {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
         LibraryInventory libraryInventory = new LibraryInventory();
         Book book = new Book(1, "Coffee shop", "Stormzy", 1999);
         Book book2 = new Book (2, "Everything is everything", "Lauren Hill", 2001);
@@ -18,6 +17,7 @@ public class BibliotecaApp {
         libraryInventory.addBook(book2);
         libraryInventory.addBook(book3);
         Menu menu = new Menu(libraryInventory);
+        System.out.println(bibliotecaApp.getWelcomeMessage());
         System.out.println(menu.getMenuOptions());
     }
 }

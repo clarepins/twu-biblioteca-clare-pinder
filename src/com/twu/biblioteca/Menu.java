@@ -24,19 +24,20 @@ public class Menu {
         if (menuChoice == 1) {
             menuAction = libraryInventory.getAvailableBooks();
         } else if (menuChoice == 2) {
-            System.out.println("Pls type in the book reference e.g. 2");
-            Scanner userInput = new Scanner(System.in);
-            int bookRef = userInput.nextInt();
+            int bookRef = receiveBookRef();
             menuAction = libraryInventory.checkOutBook(bookRef);
         } else if (menuChoice == 3) {
-            System.out.println("Pls type in the book reference e.g. 2");
-            Scanner userInput = new Scanner(System.in);
-            int bookRef = userInput.nextInt();
+            int bookRef = receiveBookRef();
             menuAction = libraryInventory.checkInBook(bookRef);
         } else if (menuChoice == 4) {
             System.exit(0);
         }
         return menuAction;
+    }
 
+    private int receiveBookRef() {
+        System.out.println("Pls type in the book reference e.g. 2");
+        Scanner userInput = new Scanner(System.in);
+        return userInput.nextInt();
     }
 }
