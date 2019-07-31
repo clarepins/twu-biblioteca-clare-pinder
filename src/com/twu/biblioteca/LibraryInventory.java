@@ -25,6 +25,8 @@ public class LibraryInventory {
         String checkOutMessage = "";
         if (switchBookLists(bookRef, availableBooks, checkedOutBooks)) {
             checkOutMessage = "Thank you! Enjoy the book";
+        } else {
+            checkOutMessage = "Sorry, that book is not available";
         }
         return checkOutMessage;
     }
@@ -33,6 +35,8 @@ public class LibraryInventory {
         String checkInMessage = "";
         if (switchBookLists(bookRef, checkedOutBooks, availableBooks)) {
             checkInMessage = "Thank you for returning the book";
+        } else {
+            checkInMessage = "That is not a valid book to return";
         }
         return checkInMessage;
     }

@@ -21,7 +21,6 @@ public class LibraryInventoryTest {
             libraryInventory.addBook(book2);
         }
 
-
     @Test
     public void shouldAddBooksToInventory() {
         String bookList = "1, title1, author1, 1990\n2, title2, author2, 1990";
@@ -41,9 +40,18 @@ public class LibraryInventoryTest {
         libraryInventory.checkInBook(1);
         String bookList = "2, title2, author2, 1990\n1, title1, author1, 1990";
         assertThat(libraryInventory.getAvailableBooks(), is(bookList));
-
-
     }
 
+    @Test
+    public void shouldReturnMessageWhenCheckOutNonExistentBook() {
+        String message = "Sorry, that book is not available";
+        assertThat(libraryInventory.checkOutBook(3), is(message));
+    }
+
+    @Test
+    public void shouldReturnMessageWhenCheckInNonExistentBook() {
+        String message = "That is not a valid book to return";
+        assertThat(libraryInventory.checkInBook(1), is(message));
+    }
 
 }
