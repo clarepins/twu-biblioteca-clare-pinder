@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.LibraryInventory;
+
 import java.io.PrintStream;
 
 public class Menu {

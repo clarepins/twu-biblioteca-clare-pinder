@@ -1,3 +1,4 @@
+```
 Instructions to push your code to code.google.com
 =================================================
 1. Sign into GitHub and create a new repository
@@ -26,4 +27,8 @@ Instructions to open your code in Intellij
 1. Go to File -> Open (or Open Project)
 2. Select the directory containing the code
 DONE !
+```
+
+*Notes to reader*
+- Interactions between classes are not yet mocked in tests.
 

@@ -11,8 +11,7 @@ public class LibraryInventory {
         this.printStream = printStream;
     }
 
-    public void addBook(int ref, String title, String author, int publicationDate) {
-        Book book = new Book(ref, title, author, publicationDate);
+    public void addBook(Book book) {
         availableBooks.add(book);
     }
 
