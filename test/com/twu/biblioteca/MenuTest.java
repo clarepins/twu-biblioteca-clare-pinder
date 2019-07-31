@@ -8,7 +8,9 @@ import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.mockito.Mock;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.io.PrintStream;
 
 import static com.sun.javaws.JnlpxArgs.verify;
 import static org.hamcrest.CoreMatchers.is;
@@ -45,6 +47,7 @@ public class MenuTest {
         String menuOptions = "\nBibliotecaApp menu - please select a number." +
                 "\n1. List of books" +
                 "\n2. Check out book" +
+                "\n3. Check in book" +
                 "\n4. Quit";
         assertThat(menu.getMenuOptions(), is(menuOptions));
     }
@@ -67,5 +70,18 @@ public class MenuTest {
         testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
         assertThat(menu.selectMenuOption(2), is("Thank you! Enjoy the book"));
+    }
+
+    @Test
+    public void shouldCheckInBookWhenOption3IsSelected() {
+        String userInput = "1";
+        testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
+        menu.selectMenuOption(2);
+
+        String userInput2 = "1";
+        testIn = new ByteArrayInputStream(userInput2.getBytes());
+        System.setIn(testIn);
+        assertThat(menu.selectMenuOption(3), is("Thank you for returning the book"));
     }
 }
