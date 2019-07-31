@@ -17,6 +17,8 @@ public class Menu {
         String menuAction = "";
         if (menuChoice == 1) {
             menuAction = libraryInventory.getAvailableBooks();
+        } else if (menuChoice == 4) {
+            System.exit(0);
         }
         return menuAction;
 

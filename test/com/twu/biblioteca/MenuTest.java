@@ -1,7 +1,9 @@
 package com.twu.biblioteca;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.mockito.Mock;
 
 import static com.sun.javaws.JnlpxArgs.verify;
@@ -12,10 +14,19 @@ import static org.mockito.Mockito.when;
 
 public class MenuTest {
     LibraryInventory libraryInventory;
+    Menu menu;
+
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Before
     public void setUp() {
         libraryInventory = new LibraryInventory();
+    }
+
+    @Before
+    public void setUp2() {
+        menu = new Menu(libraryInventory);
     }
 
 
@@ -33,9 +44,14 @@ public class MenuTest {
         Book book2 = new Book(2, "testTitle", "testAuthor", 1990);
         libraryInventory.addBook(book);
         libraryInventory.addBook(book2);
-        Menu menu = new Menu(libraryInventory);
         String availableBooks = "1, testTitle, testAuthor, 1990\n2, testTitle, testAuthor, 1990";
-        String output = menu.selectMenuOption(1);
-        assertThat(output, is(availableBooks));
+        assertThat(menu.selectMenuOption(1), is(availableBooks));
+    }
+
+    @Test
+    public void shouldQuitWhenOption4IsSelected() {
+        exit.expectSystemExitWithStatus(0);
+        menu.selectMenuOption(4);
+
     }
 }

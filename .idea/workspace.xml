@@ -8,10 +8,8 @@
       <change beforePath="$PROJECT_DIR$/../biblioteca_practice/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca_practice/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/LibraryInventoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/LibraryInventoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MenuTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryInventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryInventoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -49,8 +47,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+                <state relative-caret-position="340">
+                  <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -80,8 +78,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="403">
-                  <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+                <state relative-caret-position="386">
+                  <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -206,8 +204,8 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Installers/mockito-core-3.0.4" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Installers/system-rules-1.19.0.jar!/" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.168693" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -224,20 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MenuTest.shouldGetAvailableBooksWhenOption1IsSelected">
-    <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MenuTest.shouldQuitWhenOption4IsSelected">
     <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -301,13 +286,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MenuTest.shouldQuitWhenOption4IsSelected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
+      <option name="METHOD_NAME" value="shouldQuitWhenOption4IsSelected" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MenuTest.shouldQuitWhenOption4IsSelected" />
         <item itemvalue="JUnit.MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" />
         <item itemvalue="JUnit.MenuTest.shouldPrintMenuOptions" />
         <item itemvalue="JUnit.BookTest" />
         <item itemvalue="JUnit.LibraryInventoryTest.shouldAddBooksToInventoryAndPrint" />
-        <item itemvalue="Application.BibliotecaApp" />
       </list>
     </recent_temporary>
   </component>
@@ -325,21 +326,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MenuTest_shouldPrintMenuOptionsAndReceiveInput - 2019.07.31 at 12h 06m 21s.xml">
-      <configuration name="MenuTest.shouldPrintMenuOptionsAndReceiveInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MenuTest_shouldPrintMenuOptionsAndReceiveInput - 2019.07.31 at 12h 06m 56s.xml">
-      <configuration name="MenuTest.shouldPrintMenuOptionsAndReceiveInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MenuTest_shouldPrintMenuOptionsAndReceiveInput - 2019.07.31 at 12h 08m 11s.xml">
-      <configuration name="MenuTest.shouldPrintMenuOptionsAndReceiveInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MenuTest_shouldPrintMenuOptionsAndReceiveInput - 2019.07.31 at 12h 09m 10s.xml">
-      <configuration name="MenuTest.shouldPrintMenuOptionsAndReceiveInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MenuTest_shouldPrintMenuOptions - 2019.07.31 at 13h 38m 11s.xml">
-      <configuration name="MenuTest.shouldPrintMenuOptions" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LibraryInventoryTest_shouldAddBooksToInventoryAndPrint - 2019.07.31 at 13h 45m 36s.xml">
       <configuration name="LibraryInventoryTest.shouldAddBooksToInventoryAndPrint" configurationId="JUnit" />
     </history-entry>
@@ -354,6 +340,21 @@
     </history-entry>
     <history-entry file="MenuTest_shouldGetAvailableBooksWhenOption1IsSelected - 2019.07.31 at 14h 11m 26s.xml">
       <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MenuTest_shouldGetAvailableBooksWhenOption1IsSelected - 2019.07.31 at 15h 34m 05s.xml">
+      <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MenuTest_shouldGetAvailableBooksWhenOption1IsSelected - 2019.07.31 at 15h 35m 56s.xml">
+      <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MenuTest_shouldGetAvailableBooksWhenOption1IsSelected - 2019.07.31 at 15h 39m 29s.xml">
+      <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MenuTest_shouldGetAvailableBooksWhenOption1IsSelected - 2019.07.31 at 15h 40m 17s.xml">
+      <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MenuTest_shouldQuitWhenOption4IsSelected - 2019.07.31 at 15h 52m 29s.xml">
+      <configuration name="MenuTest.shouldQuitWhenOption4IsSelected" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -511,15 +512,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state relative-caret-position="340">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        <state relative-caret-position="386">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -580,7 +581,6 @@
             <option name="proportions">
               <list>
                 <option value="0.168693" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
