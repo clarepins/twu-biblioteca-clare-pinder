@@ -19,7 +19,7 @@ public class Menu {
         return menuOptions;
     }
 
-    public String selectMenuOption(int menuChoice) {
+    public String selectMenuOption(int menuChoice) { // I'll make this a switch case (just ran out of time)
         String menuAction = "";
         if (menuChoice == 1) {
             menuAction = libraryInventory.getAvailableBooks();
@@ -31,6 +31,8 @@ public class Menu {
             menuAction = libraryInventory.checkInBook(bookRef);
         } else if (menuChoice == 4) {
             System.exit(0);
+        } else {
+            menuAction = "Please select a valid option!";
         }
         return menuAction;
     }
