@@ -22,7 +22,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.38959467">
+    <splitter split-orientation="horizontal" split-proportion="0.47731397">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -64,8 +64,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/LibraryInventory.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+                <state relative-caret-position="522">
+                  <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -95,8 +95,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryInventoryTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="406">
-                  <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+                <state relative-caret-position="434">
+                  <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -231,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryInventoryTest.shouldCheckoutBook">
+  <component name="RunManager" selected="JUnit.LibraryInventoryTest.shouldCheckInBook">
     <configuration name="BibliotecaAppTest.shouldGetWelcomeMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -264,6 +264,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryInventoryTest.shouldCheckInBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibraryInventoryTest" />
+      <option name="METHOD_NAME" value="shouldCheckInBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibraryInventoryTest.shouldCheckoutBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -275,22 +291,6 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibraryInventoryTest" />
       <option name="METHOD_NAME" value="shouldCheckoutBook" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
-      <option name="METHOD_NAME" value="shouldGetAvailableBooksWhenOption1IsSelected" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -314,11 +314,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryInventoryTest.shouldCheckInBook" />
         <item itemvalue="JUnit.LibraryInventoryTest.shouldCheckoutBook" />
         <item itemvalue="JUnit.LibraryInventoryTest.shouldAddBooksToInventory" />
         <item itemvalue="JUnit.BibliotecaAppTest.shouldGetWelcomeMessage" />
         <item itemvalue="JUnit.MenuTest.shouldQuitWhenOption4IsSelected" />
-        <item itemvalue="JUnit.MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" />
       </list>
     </recent_temporary>
   </component>
@@ -336,9 +336,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MenuTest_shouldPrintMenuOptions - 2019.07.31 at 13h 54m 51s.xml">
-      <configuration name="MenuTest.shouldPrintMenuOptions" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MenuTest_shouldGetAvailableBooksWhenOption1IsSelected - 2019.07.31 at 14h 11m 26s.xml">
       <configuration name="MenuTest.shouldGetAvailableBooksWhenOption1IsSelected" configurationId="JUnit" />
     </history-entry>
@@ -366,6 +363,9 @@
     <history-entry file="LibraryInventoryTest_shouldAddBooksToInventory - 2019.07.31 at 16h 05m 22s.xml">
       <configuration name="LibraryInventoryTest.shouldAddBooksToInventory" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryInventoryTest_shouldCheckoutBook - 2019.07.31 at 16h 10m 48s.xml">
+      <configuration name="LibraryInventoryTest.shouldCheckoutBook" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -378,7 +378,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.26868907" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.20151679" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33044422" />
@@ -529,15 +529,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/LibraryInventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="522">
+          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryInventoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="434">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
         </state>
       </provider>
     </entry>

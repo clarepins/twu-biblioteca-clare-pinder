@@ -29,10 +29,20 @@ public class LibraryInventoryTest {
     }
 
     @Test
-    public void shouldCheckoutBook() {
+    public void shouldCheckOutBook() {
         libraryInventory.checkOutBook(1);
         String bookList = "2, title2, author2, 1990";
         assertThat(libraryInventory.getAvailableBooks(), is(bookList));
+    }
+
+    @Test
+    public void shouldCheckInBook() {
+        libraryInventory.checkOutBook(1);
+        libraryInventory.checkInBook(1);
+        String bookList = "2, title2, author2, 1990\n1, title1, author1, 1990";
+        assertThat(libraryInventory.getAvailableBooks(), is(bookList));
+
+
     }
 
 

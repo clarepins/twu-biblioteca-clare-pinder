@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 public class LibraryInventory {
     ArrayList<Book> availableBooks = new ArrayList();
+    ArrayList<Book> checkedOutBooks = new ArrayList();
 
     public LibraryInventory() {
     }
@@ -27,9 +28,25 @@ public class LibraryInventory {
 
             if (book.getRef() == bookRef) { // maybe build a method that takes listToAddTo and listToRemoveFrom
                 iterator.remove();
+                checkedOutBooks.add(book);
                 checkOutMessage = "Thank you! Enjoy the book";
             }
         }
         return checkOutMessage;
+    }
+
+    public String checkInBook(int bookRef) {
+        Iterator<Book> iterator = checkedOutBooks.iterator();
+        String checkInMessage = "";
+        while (iterator.hasNext()) {
+            Book book = iterator.next();
+
+            if (book.getRef() == bookRef) { // maybe build a method that takes listToAddTo and listToRemoveFrom
+                iterator.remove();
+                availableBooks.add(book);
+                checkInMessage = "Thank you for returning the book";
+            }
+        }
+        return checkInMessage;
     }
 }
