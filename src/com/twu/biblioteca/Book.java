@@ -1,24 +1,8 @@
 package com.twu.biblioteca;
 
-public class Book {
-    private int ref;
-    private String title;
-    private String author;
-    private int publicationDate;
+public class Book extends LibraryItem {
 
-    public Book(int refNumber, String titlePhrase, String authorName, int year) {
-        ref = refNumber;
-        title = titlePhrase;
-        author = authorName;
-        publicationDate = year;
+    public Book(int refNumber, String nameOrTitle, String directorOrAuthor, int year) {
+        super(refNumber, nameOrTitle, directorOrAuthor, year);
     }
-
-    public int getRef() {
-        return ref;
-    }
-
-    public String getBookInfo() {
-        return ref + ", " + title + ", " + author + ", " + publicationDate;
-    }
-
 }
