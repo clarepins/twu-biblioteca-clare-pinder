@@ -12,29 +12,20 @@ public class LibraryInventory {
     }
 
     public void addItem(String itemType, LibraryItem libraryItem) {
-        switch (itemType) {
-            case "book":
-                availableBooks.add(libraryItem);
-            break;
-            case "movie":
-                availableMovies.add(libraryItem);
-        }
+        chooseArrayList(itemType).add(libraryItem);
     }
 
     public String getAvailableItems(String itemType) {
         ArrayList<String> infoList = new ArrayList();
-        ArrayList<LibraryItem> availableItems = new ArrayList();
-        switch (itemType) {
-            case "book": availableItems = availableBooks; break;
-            case "movie": availableItems = availableMovies;
-        }
+        ArrayList<LibraryItem> availableItems = chooseArrayList(itemType);
         availableItems.forEach(item -> infoList.add(item.getInfo()));
         return String.join("\n", infoList);
     }
 
-    public String checkOutBook(int bookRef) {
+    public String checkOutItem(String itemType, int itemRef) {
         String checkOutMessage = "";
-        if (switchBookLists(bookRef, availableBooks, checkedOutBooks)) {
+        ArrayList<LibraryItem> availableItems = chooseArrayList(itemType);
+        if (switchBookLists(itemRef, availableItems, checkedOutBooks)) {
             checkOutMessage = "Thank you! Enjoy the book";
         } else {
             checkOutMessage = "Sorry, that book is not available";
@@ -66,6 +57,15 @@ public class LibraryInventory {
             }
         }
         return successfulOperation;
+    }
+
+    private ArrayList<LibraryItem> chooseArrayList(String itemType) {
+        ArrayList<LibraryItem> availableItems = new ArrayList();
+        switch (itemType) {
+            case "book": availableItems = availableBooks; break;
+            case "movie": availableItems = availableMovies;
+        }
+        return availableItems;
     }
 
 }

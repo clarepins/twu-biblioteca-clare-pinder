@@ -26,12 +26,12 @@ public class Menu {
                 menuAction = libraryInventory.getAvailableItems("book");
             break;
             case 2:
-                int bookRef = receiveBookRef();
-                menuAction = libraryInventory.checkOutBook(bookRef);
+                int itemRef = receiveBookRef();
+                menuAction = libraryInventory.checkOutItem("book", itemRef);
             break;
             case 3:
-                bookRef = receiveBookRef();
-                menuAction = libraryInventory.checkInBook(bookRef);
+                itemRef = receiveBookRef();
+                menuAction = libraryInventory.checkInBook(itemRef);
             break;
             case 4:
                 System.exit(0);
