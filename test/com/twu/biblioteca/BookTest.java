@@ -22,7 +22,7 @@ public class BookTest {
 
     @Test
     public void ShouldReturnBookInfo() {
-        assertThat(book.getBookInfo(), is("3, Glasshouses, Maribou State, 2019"));
+        assertThat(book.getInfo(), is("3, Glasshouses, Maribou State, 2019"));
     }
 
 }

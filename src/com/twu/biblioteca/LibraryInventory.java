@@ -17,7 +17,7 @@ public class LibraryInventory {
 
     public String getAvailableBooks() {
         ArrayList<String> bookInfoList = new ArrayList();
-        availableBooks.forEach(book -> bookInfoList.add(book.getBookInfo()));
+        availableBooks.forEach(book -> bookInfoList.add(book.getInfo()));
         return String.join("\n", bookInfoList);
     }
 
