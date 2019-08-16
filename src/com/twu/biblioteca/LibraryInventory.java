@@ -1,24 +1,35 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
 public class LibraryInventory {
-    ArrayList<Book> availableBooks = new ArrayList();
-    ArrayList<Book> checkedOutBooks = new ArrayList();
+    private ArrayList<LibraryItem> availableBooks = new ArrayList();
+    private ArrayList<LibraryItem> availableMovies = new ArrayList();
+    private ArrayList<LibraryItem> checkedOutBooks = new ArrayList();
 
     public LibraryInventory() {
     }
 
-    public void addBook(Book book) {
-        availableBooks.add(book);
+    public void addItem(String itemType, LibraryItem libraryItem) {
+        switch (itemType) {
+            case "book":
+                availableBooks.add(libraryItem);
+            break;
+            case "movie":
+                availableMovies.add(libraryItem);
+        }
     }
 
-    public String getAvailableBooks() {
-        ArrayList<String> bookInfoList = new ArrayList();
-        availableBooks.forEach(book -> bookInfoList.add(book.getInfo()));
-        return String.join("\n", bookInfoList);
+    public String getAvailableItems(String itemType) {
+        ArrayList<String> infoList = new ArrayList();
+        ArrayList<LibraryItem> availableItems = new ArrayList();
+        switch (itemType) {
+            case "book": availableItems = availableBooks; break;
+            case "movie": availableItems = availableMovies;
+        }
+        availableItems.forEach(item -> infoList.add(item.getInfo()));
+        return String.join("\n", infoList);
     }
 
     public String checkOutBook(int bookRef) {
@@ -41,19 +52,20 @@ public class LibraryInventory {
         return checkInMessage;
     }
 
-    private Boolean switchBookLists(int bookRef, ArrayList<Book> leavingList, ArrayList<Book> joiningList) {
+    private Boolean switchBookLists(int bookRef, ArrayList<LibraryItem> leavingList, ArrayList<LibraryItem> joiningList) {
 //        had to use weird Iterator syntax to avoid ConcurrentModificationException
-        Iterator<Book> iterator = leavingList.iterator();
+        Iterator<LibraryItem> iterator = leavingList.iterator();
         Boolean successfulOperation = false;
         while (iterator.hasNext()) {
-            Book book = iterator.next();
+            LibraryItem libraryItem = iterator.next();
 
-            if (book.getRef() == bookRef) {
+            if (libraryItem.getRef() == bookRef) {
                 iterator.remove();
-                joiningList.add(book);
+                joiningList.add(libraryItem);
                 successfulOperation = true;
             }
         }
         return successfulOperation;
     }
+
 }

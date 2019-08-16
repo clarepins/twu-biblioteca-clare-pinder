@@ -27,8 +27,8 @@ public class MenuTest {
         menu = new Menu(libraryInventory);
         Book book = new Book(1, "testTitle", "testAuthor", 1990);
         Book book2 = new Book(2, "testTitle", "testAuthor", 1990);
-        libraryInventory.addBook(book);
-        libraryInventory.addBook(book2);
+        libraryInventory.addItem("book", book);
+        libraryInventory.addItem("book", book2);
     }
 
     private void provideInput(String data) {

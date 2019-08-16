@@ -23,7 +23,7 @@ public class Menu {
         String menuAction = "";
         switch (menuChoice) {
             case 1:
-                menuAction = libraryInventory.getAvailableBooks();
+                menuAction = libraryInventory.getAvailableItems("book");
             break;
             case 2:
                 int bookRef = receiveBookRef();
