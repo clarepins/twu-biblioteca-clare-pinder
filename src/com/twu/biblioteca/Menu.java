@@ -19,20 +19,25 @@ public class Menu {
         return menuOptions;
     }
 
-    public String selectMenuOption(int menuChoice) { // I'll make this a switch case (just ran out of time)
+    public String selectMenuOption(int menuChoice) {
         String menuAction = "";
-        if (menuChoice == 1) {
-            menuAction = libraryInventory.getAvailableBooks();
-        } else if (menuChoice == 2) {
-            int bookRef = receiveBookRef();
-            menuAction = libraryInventory.checkOutBook(bookRef);
-        } else if (menuChoice == 3) {
-            int bookRef = receiveBookRef();
-            menuAction = libraryInventory.checkInBook(bookRef);
-        } else if (menuChoice == 4) {
-            System.exit(0);
-        } else {
-            menuAction = "Please select a valid option!";
+        switch (menuChoice) {
+            case 1:
+                menuAction = libraryInventory.getAvailableBooks();
+            break;
+            case 2:
+                int bookRef = receiveBookRef();
+                menuAction = libraryInventory.checkOutBook(bookRef);
+            break;
+            case 3:
+                bookRef = receiveBookRef();
+                menuAction = libraryInventory.checkInBook(bookRef);
+            break;
+            case 4:
+                System.exit(0);
+            break;
+            default:
+                menuAction = "Please select a valid option!";
         }
         return menuAction;
     }
