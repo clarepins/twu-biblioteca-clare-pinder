@@ -31,7 +31,7 @@ public class Menu {
             break;
             case 3:
                 itemRef = receiveBookRef();
-                menuAction = libraryInventory.checkInBook(itemRef);
+                menuAction = libraryInventory.checkInItem("book", itemRef);
             break;
             case 4:
                 System.exit(0);

@@ -1,0 +1,35 @@
+ANSWERS
+
+1.
+Anand Beck
+SELECT member.name FROM member, book, checkout_item WHERE book.title = "The Hobbit" AND book.id = checkout_item.book_id AND member.id = checkout_item.member_id;
+
+2.
+37
+SELECT COUNT (member.id) FROM member WHERE member.id NOT IN (SELECT checkout_item.member_id FROM checkout_item);
+
+3.
+Fellowship of the Ring
+1984
+Tom Sawyer
+Catcher in the Rye
+To Kill a Mockingbird
+Domain Driven Design
+SELECT book.title FROM book WHERE book.id NOT IN (SELECT checkout_item.book_id FROM checkout_item WHERE checkout_item.book_id > 0);
+
+Thin Red Line
+Crouching Tiger, Hidden Dragon
+Lawrence of Arabia
+Office Space
+SELECT movie.title FROM movie WHERE movie.id NOT IN (SELECT checkout_item.movie_id FROM checkout_item WHERE checkout_item.movie_id > 0);
+
+4.
+INSERT INTO book (title) VALUES ("Pragmatic Programmer");
+INSERT INTO member (name) VALUES ("Clare Pinder");
+INSERT INTO checkout_item (member_id, book_id) VALUES (43, 11);
+SELECT member.name FROM member, book, checkout_item WHERE book.title = "Pragmatic Programmer" AND book.id = checkout_item.book_id AND member.id = checkout_item.member_id;
+
+5.
+Anand Beck
+Frank Smith
+SELECT member.name FROM member WHERE member.id  IN (SELECT checkout_item.member_id FROM checkout_item GROUP BY member_id HAVING COUNT(member_id) > 1);

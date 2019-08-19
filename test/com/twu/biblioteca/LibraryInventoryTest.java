@@ -53,13 +53,21 @@ public class LibraryInventoryTest {
         assertThat(libraryInventory.getAvailableItems("movie"), is(movieList));
     }
 
-//    @Test
-//    public void shouldCheckInBook() {
-//        libraryInventory.checkOutBook(1);
-//        libraryInventory.checkInBook(1);
-//        String bookList = "2, title2, author2, 1990\n1, title1, author1, 1990";
-//        assertThat(libraryInventory.getAvailableItems("book"), is(bookList));
-//    }
+    @Test
+    public void shouldCheckInBook() {
+        libraryInventory.checkOutItem("book", 1);
+        libraryInventory.checkInItem("book", 1);
+        String bookList = "2, title2, author2, 1990\n1, title1, author1, 1990";
+        assertThat(libraryInventory.getAvailableItems("book"), is(bookList));
+    }
+
+    @Test
+    public void shouldCheckInMovie() {
+        libraryInventory.checkOutItem("movie", 1);
+        libraryInventory.checkInItem("movie", 1);
+        String bookList = "2, name2, director2, 1990, Rating: 8\n1, name1, director1, 1990, Rating: 5";
+        assertThat(libraryInventory.getAvailableItems("movie"), is(bookList));
+    }
 
 //    @Test
 //    public void shouldReturnMessageWhenCheckOutNonExistentBook() {
