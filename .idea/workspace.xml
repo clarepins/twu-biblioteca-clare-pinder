@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47438df9-5e58-4695-a006-b8bbdba0e1e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/LibraryInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/LibraryInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryInventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryInventoryTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecaAppTest">
+  <component name="RunManager" selected="JUnit.LibraryInventoryTest.shouldReturnMessageWhenCheckInNonExistentBook">
     <configuration name="BibliotecaAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -88,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryInventoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryInventoryTest.shouldReturnMessageWhenCheckInNonExistentBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -98,12 +98,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibraryInventoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="shouldReturnMessageWhenCheckInNonExistentBook" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryInventoryTest.shouldCheckInMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryInventoryTest.shouldReturnMessageWhenCheckOutNonExistentBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -113,7 +114,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibraryInventoryTest" />
-      <option name="METHOD_NAME" value="shouldCheckInMovie" />
+      <option name="METHOD_NAME" value="shouldReturnMessageWhenCheckOutNonExistentBook" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryInventoryTest.shouldReturnMessageWhenCheckInNonExistentBook" />
+        <item itemvalue="JUnit.LibraryInventoryTest.shouldReturnMessageWhenCheckOutNonExistentBook" />
         <item itemvalue="JUnit.BibliotecaAppTest" />
         <item itemvalue="JUnit.MenuTest" />
         <item itemvalue="JUnit.MenuTest.shouldCheckInBookWhenOption3IsSelected" />
-        <item itemvalue="JUnit.LibraryInventoryTest" />
-        <item itemvalue="JUnit.LibraryInventoryTest.shouldCheckInMovie" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564126034075</updated>
       <workItem from="1565946101668" duration="5546000" />
-      <workItem from="1565958817936" duration="9689000" />
+      <workItem from="1565958817936" duration="10061000" />
     </task>
     <servers />
   </component>

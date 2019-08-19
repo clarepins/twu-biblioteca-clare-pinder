@@ -69,16 +69,16 @@ public class LibraryInventoryTest {
         assertThat(libraryInventory.getAvailableItems("movie"), is(bookList));
     }
 
-//    @Test
-//    public void shouldReturnMessageWhenCheckOutNonExistentBook() {
-//        String message = "Sorry, that book is not available";
-//        assertThat(libraryInventory.checkOutBook(3), is(message));
-//    }
-//
-//    @Test
-//    public void shouldReturnMessageWhenCheckInNonExistentBook() {
-//        String message = "That is not a valid book to return";
-//        assertThat(libraryInventory.checkInBook(1), is(message));
-//    }
+    @Test
+    public void shouldReturnMessageWhenCheckOutNonExistentBook() {
+        String message = "Sorry, that item is not available";
+        assertThat(libraryInventory.checkOutItem("book", 3), is(message));
+    }
+
+    @Test
+    public void shouldReturnMessageWhenCheckInNonExistentBook() {
+        String message = "That is not a valid item to return";
+        assertThat(libraryInventory.checkInItem("movie", 1), is(message));
+    }
 
 }
