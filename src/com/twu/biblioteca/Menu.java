@@ -39,6 +39,10 @@ public class Menu {
                 itemRef = receiveBookRef();
                 menuAction = libraryInventory.checkInItem("book", itemRef);
             break;
+            case 5:
+                itemRef = receiveBookRef();
+                menuAction = libraryInventory.checkOutItem("movie", itemRef);
+                break;
             case 7:
                 System.exit(0);
             break;
