@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
     private LibraryInventory libraryInventory;
+    private User currentUser;
 
     static String menuOptions = "\nBibliotecaApp menu - please select a number." +
             "\n1. Log in" +
@@ -14,7 +15,7 @@ public class Menu {
             "\n6. Check out movie" +
             "\n7. Check in movie" +
             "\n8. View my checked out books" +
-            "\n9. view my info" +
+            "\n9. View my info" +
             "\n10. Quit";
 
     public Menu(LibraryInventory libraryInventory) {
@@ -28,6 +29,10 @@ public class Menu {
     public String selectMenuOption(int menuChoice) {
         String menuAction = "";
         switch (menuChoice) {
+            case 1:
+                executeLogIn();
+                menuAction = "Welcome " + currentUser.name + "!";
+                break;
             case 2:
                 menuAction = libraryInventory.getAvailableItems("book");
             break;
@@ -59,9 +64,23 @@ public class Menu {
         return menuAction;
     }
 
+    private User executeLogIn() {
+        System.out.println("Please enter your username");
+        String username = receiveInput();
+        System.out.println("Please enter your password");
+        String password = receiveInput();
+        AuthenticationService authenticationService = new AuthenticationService();
+        return currentUser = authenticationService.logIn(username, password);
+    }
+
     private int receiveItemRef() {
         System.out.println("Pls type in the item reference e.g. 2");
         Scanner userInput = new Scanner(System.in);
         return userInput.nextInt();
+    }
+
+    private String receiveInput() {
+        Scanner userInput = new Scanner(System.in);
+        return userInput.next();
     }
 }

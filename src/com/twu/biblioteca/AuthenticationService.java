@@ -22,7 +22,7 @@ public class AuthenticationService {
         users.add(user2);
     }
 
-    public void logIn(String username, String password) {
+    public User logIn(String username, String password) {
         currentUser = null;
         for (User userInCollection : users) {
             if (userInCollection.username.equals(username) && userInCollection.password.equals(password)) {
@@ -30,5 +30,6 @@ public class AuthenticationService {
                 break;
             }
         }
+        return currentUser;
     }
 }
