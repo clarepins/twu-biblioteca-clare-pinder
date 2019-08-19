@@ -11,7 +11,7 @@ public class AuthenticationServiceTest {
     @Test
     public void testUserLoginWithCorrectCredentials() {
         String username = "123-4567";
-        String password = "testPassword";
+        String password = "hello123";
         AuthenticationService authenticationService = new AuthenticationService();
         authenticationService.logIn(username, password);
         assertThat(authenticationService.currentUser.username, is(username));

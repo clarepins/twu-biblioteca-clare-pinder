@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47438df9-5e58-4695-a006-b8bbdba0e1e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/AuthenticationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/AuthenticationServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/AuthenticationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/AuthenticationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/AuthenticationServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/AuthenticationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/AuthenticationServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564126034075</updated>
       <workItem from="1565946101668" duration="5546000" />
-      <workItem from="1565958817936" duration="14234000" />
+      <workItem from="1565958817936" duration="16200000" />
     </task>
     <servers />
   </component>
