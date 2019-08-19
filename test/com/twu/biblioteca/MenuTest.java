@@ -48,68 +48,71 @@ public class MenuTest {
     @Test
     public void shouldGetMenuOptions() {
         String menuOptions = "\nBibliotecaApp menu - please select a number." +
-                "\n1. List of books" +
-                "\n2. List of movies" +
-                "\n3. Check out book" +
-                "\n4. Check in book" +
-                "\n5. Check out movie" +
-                "\n6. Check in movie" +
-                "\n7. Quit";
+                "\n1. Log in" +
+                "\n2. List of books" +
+                "\n3. List of movies" +
+                "\n4. Check out book" +
+                "\n5. Check in book" +
+                "\n6. Check out movie" +
+                "\n7. Check in movie" +
+                "\n8. View my checked out books" +
+                "\n9. view my info" +
+                "\n10. Quit";
         assertThat(menu.getMenuOptions(), is(menuOptions));
     }
 
     @Test
-    public void shouldGetAvailableBooksWhenOption1IsSelected() {
+    public void shouldGetAvailableBooksWhenOption2IsSelected() {
         String availableBooks = "1, testTitle, testAuthor, 1990\n2, testTitle, testAuthor, 1990";
-        assertThat(menu.selectMenuOption(1), is(availableBooks));
+        assertThat(menu.selectMenuOption(2), is(availableBooks));
     }
 
     @Test
-    public void shouldGetAvailableMoviesWhenOption2IsSelected() {
+    public void shouldGetAvailableMoviesWhenOption3IsSelected() {
         String availableMovies = "1, testName, testDirector, 1990, Rating: 7\n2, testName, testDirector, 1990, Rating: 10";
-        assertThat(menu.selectMenuOption(2), is(availableMovies));
+        assertThat(menu.selectMenuOption(3), is(availableMovies));
     }
 
     @Test
-    public void shouldQuitWhenOption7IsSelected() {
+    public void shouldQuitWhenOption10IsSelected() {
         exit.expectSystemExitWithStatus(0);
-        menu.selectMenuOption(7);
+        menu.selectMenuOption(10);
     }
 
     @Test
-    public void shouldCheckOutBookWhenOption3IsSelected() {
+    public void shouldCheckOutBookWhenOption4IsSelected() {
         String userInput = "1";
         provideInput(userInput);
-        assertThat(menu.selectMenuOption(3), is("Thank you! Enjoy the item"));
+        assertThat(menu.selectMenuOption(4), is("Thank you! Enjoy the item"));
     }
 
     @Test
-    public void shouldCheckOutMovieWhenOption5IsSelected() {
+    public void shouldCheckOutMovieWhenOption6IsSelected() {
         String userInput = "1";
         provideInput(userInput);
-        assertThat(menu.selectMenuOption(5), is("Thank you! Enjoy the item"));
+        assertThat(menu.selectMenuOption(6), is("Thank you! Enjoy the item"));
     }
 
     @Test
-    public void shouldCheckInBookWhenOption4IsSelected() {
+    public void shouldCheckInBookWhenOption5IsSelected() {
         String userInput = "1";
         provideInput(userInput);
-        menu.selectMenuOption(3);
+        menu.selectMenuOption(4);
 
         String userInput2 = "1";
         provideInput(userInput2);
-        assertThat(menu.selectMenuOption(4), is("Thank you for returning the item"));
+        assertThat(menu.selectMenuOption(5), is("Thank you for returning the item"));
     }
 
     @Test
-    public void shouldCheckInMovieWhenOption6IsSelected() {
+    public void shouldCheckInMovieWhenOption7IsSelected() {
         String userInput = "1";
         provideInput(userInput);
-        menu.selectMenuOption(5);
+        menu.selectMenuOption(6);
 
         String userInput2 = "1";
         provideInput(userInput2);
-        assertThat(menu.selectMenuOption(6), is("Thank you for returning the item"));
+        assertThat(menu.selectMenuOption(7), is("Thank you for returning the item"));
     }
 
 

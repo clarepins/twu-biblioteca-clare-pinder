@@ -28,6 +28,4 @@ public class AuthenticationServiceTest {
         assertThat(authenticationService.currentUser.email, is("clare@TW.com"));
         assertThat(authenticationService.currentUser.phoneNum, is("071234567"));
     }
-
-
 }
