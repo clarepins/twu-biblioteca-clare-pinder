@@ -48,8 +48,7 @@ public class BibliotecaAppTest {
 //        I gave up with this test. It needs to mock multiple inputStreams and outputStreams, as well as quit the
 //        app so the test doesn't keep running indefinitely.
 
-//        LibraryInventory libraryInventory = new LibraryInventory();
-//        Menu menu = new Menu(libraryInventory);
+//        bibliotecaApp.setUpLibraryAndMenu();
 //        bibliotecaApp.runApp(menu);
 //        String menuOptions = "\nBibliotecaApp menu - please select a number." +
 //                "\n1. List of books" +

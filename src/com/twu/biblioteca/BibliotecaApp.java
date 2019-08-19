@@ -15,6 +15,25 @@ public class BibliotecaApp {
         printStream.println(welcomeMessage);
     }
 
+    public Menu setUpLibraryAndMenu() {
+//        This method is untested because to test it would require runApp which is also untested
+        LibraryInventory libraryInventory = new LibraryInventory();
+        Book book = new Book(1, "Coffee shop", "Stormzy", 1999);
+        Book book2 = new Book (2, "Everything is everything", "Lauren Hill", 2001);
+        Book book3 = new Book(3, "Glasshouses", "Maribou State", 2019);
+        Movie movie = new Movie(1, "The Wizard of Oz", "Victor Fleming", 1939, 10);
+        Movie movie2 = new Movie(2, "Some Like it Hot", "Billy Wilder", 1959, 3);
+        Movie movie3 = new Movie(3, "Psycho", "Alfred Hitchcock", 1960, 7);
+        libraryInventory.addItem("book", book);
+        libraryInventory.addItem("book", book2);
+        libraryInventory.addItem("book", book3);
+        libraryInventory.addItem("movie", movie);
+        libraryInventory.addItem("movie", movie2);
+        libraryInventory.addItem("movie", movie3);
+        Menu menu = new Menu(libraryInventory);
+        return menu;
+    }
+
     public void runApp(Menu menu) {
 //        I haven't tested this method. 1. I was finding it difficult to test for the
 //        second printStream. I could possibly inject 2 different mock printStreams but that
@@ -34,21 +53,8 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(System.out);
-        LibraryInventory libraryInventory = new LibraryInventory();
-        Book book = new Book(1, "Coffee shop", "Stormzy", 1999);
-        Book book2 = new Book (2, "Everything is everything", "Lauren Hill", 2001);
-        Book book3 = new Book(3, "Glasshouses", "Maribou State", 2019);
-        Movie movie = new Movie(1, "The Wizard of Oz", "Victor Fleming", 1939, 10);
-        Movie movie2 = new Movie(2, "Some Like it Hot", "Billy Wilder", 1959, 3);
-        Movie movie3 = new Movie(3, "Psycho", "Alfred Hitchcock", 1960, 7);
-        libraryInventory.addItem("book", book);
-        libraryInventory.addItem("book", book2);
-        libraryInventory.addItem("book", book3);
-        libraryInventory.addItem("movie", movie);
-        libraryInventory.addItem("movie", movie2);
-        libraryInventory.addItem("movie", movie3);
-        Menu menu = new Menu(libraryInventory);
         bibliotecaApp.printWelcomeMessage();
+        Menu menu = bibliotecaApp.setUpLibraryAndMenu();
         bibliotecaApp.runApp(menu);
     }
 }
