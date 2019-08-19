@@ -9,7 +9,9 @@ public class Menu {
             "\n1. List of books" +
             "\n2. Check out book" +
             "\n3. Check in book" +
-            "\n4. Quit";
+            "\n4. Check out movie" +
+            "\n5. Check in movie" +
+            "\n6. Quit";
 
     public Menu(LibraryInventory libraryInventory) {
         this.libraryInventory = libraryInventory;
