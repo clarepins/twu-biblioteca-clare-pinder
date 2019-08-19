@@ -32,16 +32,20 @@ public class Menu {
                 menuAction = libraryInventory.getAvailableItems("movie");
             break;
             case 3:
-                int itemRef = receiveBookRef();
+                int itemRef = receiveItemRef();
                 menuAction = libraryInventory.checkOutItem("book", itemRef);
             break;
             case 4:
-                itemRef = receiveBookRef();
+                itemRef = receiveItemRef();
                 menuAction = libraryInventory.checkInItem("book", itemRef);
             break;
             case 5:
-                itemRef = receiveBookRef();
+                itemRef = receiveItemRef();
                 menuAction = libraryInventory.checkOutItem("movie", itemRef);
+                break;
+            case 6:
+                itemRef = receiveItemRef();
+                menuAction = libraryInventory.checkInItem("movie", itemRef);
                 break;
             case 7:
                 System.exit(0);
@@ -52,7 +56,7 @@ public class Menu {
         return menuAction;
     }
 
-    private int receiveBookRef() {
+    private int receiveItemRef() {
         System.out.println("Pls type in the book reference e.g. 2");
         Scanner userInput = new Scanner(System.in);
         return userInput.nextInt();

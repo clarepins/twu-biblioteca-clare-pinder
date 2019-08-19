@@ -84,20 +84,33 @@ public class MenuTest {
     }
 
     @Test
-    public void shouldCheckOutMovieWhenOption3IsSelected() {
+    public void shouldCheckOutMovieWhenOption5IsSelected() {
         String userInput = "1";
         provideInput(userInput);
         assertThat(menu.selectMenuOption(5), is("Thank you! Enjoy the item"));
     }
 
-//    @Test
-//    public void shouldCheckInBookWhenOption3IsSelected() {
-//        String userInput = "1";
-//        provideInput(userInput);
-//        menu.selectMenuOption(2);
-//
-//        String userInput2 = "1";
-//        provideInput(userInput2);
-//        assertThat(menu.selectMenuOption(3), is("Thank you for returning the item"));
-//    }
+    @Test
+    public void shouldCheckInBookWhenOption4IsSelected() {
+        String userInput = "1";
+        provideInput(userInput);
+        menu.selectMenuOption(3);
+
+        String userInput2 = "1";
+        provideInput(userInput2);
+        assertThat(menu.selectMenuOption(4), is("Thank you for returning the item"));
+    }
+
+    @Test
+    public void shouldCheckInMovieWhenOption6IsSelected() {
+        String userInput = "1";
+        provideInput(userInput);
+        menu.selectMenuOption(5);
+
+        String userInput2 = "1";
+        provideInput(userInput2);
+        assertThat(menu.selectMenuOption(6), is("Thank you for returning the item"));
+    }
+
+
 }
