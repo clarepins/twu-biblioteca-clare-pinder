@@ -65,18 +65,17 @@ public class MenuTest {
     }
 
     @Test
-    public void shouldGetAvailableMoviesWhenOption1IsSelected() {
+    public void shouldGetAvailableMoviesWhenOption2IsSelected() {
         String availableMovies = "1, testName, testDirector, 1990, Rating: 7\n2, testName, testDirector, 1990, Rating: 10";
         assertThat(menu.selectMenuOption(2), is(availableMovies));
     }
 
+    @Test
+    public void shouldQuitWhenOption7IsSelected() {
+        exit.expectSystemExitWithStatus(0);
+        menu.selectMenuOption(7);
+    }
 
-//    @Test
-//    public void shouldQuitWhenOption4IsSelected() {
-//        exit.expectSystemExitWithStatus(0);
-//        menu.selectMenuOption(4);
-//    }
-//
 //    @Test
 //    public void shouldCheckOutBookWhenOption2IsSelected() {
 //        String userInput = "1";
