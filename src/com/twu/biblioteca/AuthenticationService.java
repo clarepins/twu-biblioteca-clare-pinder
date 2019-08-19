@@ -11,6 +11,9 @@ public class AuthenticationService {
         User user = new User();
         user.username = "123-4567";
         user.password = "hello123";
+        user.name = "Clare";
+        user.email = "clare@TW.com";
+        user.phoneNum = "071234567";
         User user2 = new User();
         user2.username = "101-0101";
         user2.password = "passw0rd";
@@ -20,13 +23,13 @@ public class AuthenticationService {
     }
 
     public void logIn(String username, String password) {
-        User foundUser = null;
+        currentUser = null;
         for (User userInCollection : users) {
             if (userInCollection.username.equals(username) && userInCollection.password.equals(password)) {
-                foundUser = userInCollection;
+                currentUser = userInCollection;
                 break;
             }
         }
-        currentUser = foundUser;
+//
     }
 }
