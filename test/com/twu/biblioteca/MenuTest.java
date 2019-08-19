@@ -67,7 +67,7 @@ public class MenuTest {
     public void shouldCheckOutBookWhenOption2IsSelected() {
         String userInput = "1";
         provideInput(userInput);
-        assertThat(menu.selectMenuOption(2), is("Thank you! Enjoy the book"));
+        assertThat(menu.selectMenuOption(2), is("Thank you! Enjoy the item"));
     }
 
     @Test
@@ -78,6 +78,6 @@ public class MenuTest {
 
         String userInput2 = "1";
         provideInput(userInput2);
-        assertThat(menu.selectMenuOption(3), is("Thank you for returning the book"));
+        assertThat(menu.selectMenuOption(3), is("Thank you for returning the item"));
     }
 }

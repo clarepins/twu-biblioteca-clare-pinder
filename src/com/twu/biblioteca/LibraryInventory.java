@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class LibraryInventory {
-    private ArrayList<LibraryItem> availableBooks = new ArrayList();
-    private ArrayList<LibraryItem> availableMovies = new ArrayList();
-    private ArrayList<LibraryItem> checkedOutBooks = new ArrayList();
-    private ArrayList<LibraryItem> checkedOutMovies = new ArrayList();
+    private ArrayList<Book> availableBooks = new ArrayList();
+    private ArrayList<Movie> availableMovies = new ArrayList();
+    private ArrayList<Book> checkedOutBooks = new ArrayList();
+    private ArrayList<Movie> checkedOutMovies = new ArrayList();
 
     public LibraryInventory() {
     }
@@ -24,37 +24,37 @@ public class LibraryInventory {
     }
 
     public String checkOutItem(String itemType, int itemRef) {
-        String checkOutMessage = "";
+        String checkOutMessage;
         ArrayList<LibraryItem> availableItems = chooseAvailableList(itemType);
         ArrayList<LibraryItem> checkedOutItems = chooseCheckedOutList(itemType);
         if (switchBookLists(itemRef, availableItems, checkedOutItems)) {
-            checkOutMessage = "Thank you! Enjoy the book";
+            checkOutMessage = "Thank you! Enjoy the item";
         } else {
-            checkOutMessage = "Sorry, that book is not available";
+            checkOutMessage = "Sorry, that item is not available";
         }
         return checkOutMessage;
     }
 
     public String checkInItem(String itemType, int itemRef) {
-        String checkInMessage = "";
+        String checkInMessage;
         ArrayList<LibraryItem> availableItems = chooseAvailableList(itemType);
         ArrayList<LibraryItem> checkedOutItems = chooseCheckedOutList(itemType);
         if (switchBookLists(itemRef, checkedOutItems, availableItems)) {
-            checkInMessage = "Thank you for returning the book";
+            checkInMessage = "Thank you for returning the item";
         } else {
-            checkInMessage = "That is not a valid book to return";
+            checkInMessage = "That is not a valid item to return";
         }
         return checkInMessage;
     }
 
-    private Boolean switchBookLists(int bookRef, ArrayList<LibraryItem> leavingList, ArrayList<LibraryItem> joiningList) {
+    private Boolean switchBookLists(int itemRef, ArrayList<LibraryItem> leavingList, ArrayList<LibraryItem> joiningList) {
 //        had to use weird Iterator syntax to avoid ConcurrentModificationException
         Iterator<LibraryItem> iterator = leavingList.iterator();
         Boolean successfulOperation = false;
         while (iterator.hasNext()) {
             LibraryItem libraryItem = iterator.next();
 
-            if (libraryItem.getRef() == bookRef) {
+            if (libraryItem.getRef() == itemRef) {
                 iterator.remove();
                 joiningList.add(libraryItem);
                 successfulOperation = true;
@@ -64,7 +64,7 @@ public class LibraryInventory {
     }
 
     private ArrayList<LibraryItem> chooseAvailableList(String itemType) {
-        ArrayList<LibraryItem> selectedArrayList = new ArrayList();
+        ArrayList selectedArrayList = new ArrayList();
         switch (itemType) {
             case "book":
                 selectedArrayList = availableBooks;
@@ -76,7 +76,7 @@ public class LibraryInventory {
     }
 
     private ArrayList<LibraryItem> chooseCheckedOutList(String itemType) {
-        ArrayList<LibraryItem> selectedArrayList = new ArrayList();
+        ArrayList selectedArrayList = new ArrayList();
         switch (itemType) {
             case "book":
                 selectedArrayList = checkedOutBooks;
