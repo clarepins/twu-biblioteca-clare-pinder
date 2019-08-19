@@ -40,21 +40,37 @@ public class Menu {
                 menuAction = libraryInventory.getAvailableItems("movie");
             break;
             case 4:
-                int itemRef = receiveItemRef();
-                menuAction = libraryInventory.checkOutItem("book", itemRef);
+                if (currentUser != null) {
+                    int itemRef = receiveItemRef();
+                    menuAction = libraryInventory.checkOutItem("book", itemRef);
+                } else {
+                    menuAction = "Please log in";
+                }
             break;
             case 5:
-                itemRef = receiveItemRef();
-                menuAction = libraryInventory.checkInItem("book", itemRef);
-            break;
+                if (currentUser != null) {
+                    int itemRef = receiveItemRef();
+                    menuAction = libraryInventory.checkInItem("book", itemRef);
+                } else {
+                    menuAction = "Please log in";
+                }
+                    break;
             case 6:
-                itemRef = receiveItemRef();
-                menuAction = libraryInventory.checkOutItem("movie", itemRef);
-                break;
+                if (currentUser != null) {
+                    int itemRef = receiveItemRef();
+                    menuAction = libraryInventory.checkOutItem("movie", itemRef);
+                } else {
+                    menuAction = "Please log in";
+                }
+                    break;
             case 7:
-                itemRef = receiveItemRef();
-                menuAction = libraryInventory.checkInItem("movie", itemRef);
-                break;
+                if (currentUser != null) {
+                    int itemRef = receiveItemRef();
+                    menuAction = libraryInventory.checkInItem("movie", itemRef);
+                } else {
+                    menuAction = "Please log in";
+                }
+                    break;
             case 10:
                 System.exit(0);
             break;

@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47438df9-5e58-4695-a006-b8bbdba0e1e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/AuthenticationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/AuthenticationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/AuthenticationServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MenuTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java" afterDir="false" />
     </list>
@@ -79,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MenuTest.shouldGetMenuOptions">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -159,9 +155,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.MenuTest.shouldGetMenuOptions" />
         <item itemvalue="JUnit.MenuTest.userShouldBeAbleToLogIn" />
-        <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.MenuTest.shouldCheckInBookWhenOption5IsSelected" />
         <item itemvalue="JUnit.MenuTest.shouldCheckInMovieWhenOption7IsSelected" />
       </list>
@@ -178,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564126034075</updated>
       <workItem from="1565946101668" duration="5546000" />
-      <workItem from="1565958817936" duration="19592000" />
+      <workItem from="1565958817936" duration="20390000" />
     </task>
     <servers />
   </component>
