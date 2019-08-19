@@ -38,9 +38,15 @@ public class BibliotecaApp {
         Book book = new Book(1, "Coffee shop", "Stormzy", 1999);
         Book book2 = new Book (2, "Everything is everything", "Lauren Hill", 2001);
         Book book3 = new Book(3, "Glasshouses", "Maribou State", 2019);
+        Movie movie = new Movie(1, "The Wizard of Oz", "Victor Fleming", 1939, 10);
+        Movie movie2 = new Movie(2, "Some Like it Hot", "Billy Wilder", 1959, 3);
+        Movie movie3 = new Movie(3, "Psycho", "Alfred Hitchcock", 1960, 7);
         libraryInventory.addItem("book", book);
         libraryInventory.addItem("book", book2);
         libraryInventory.addItem("book", book3);
+        libraryInventory.addItem("movie", movie);
+        libraryInventory.addItem("movie", movie2);
+        libraryInventory.addItem("movie", movie3);
         Menu menu = new Menu(libraryInventory);
         bibliotecaApp.printWelcomeMessage();
         bibliotecaApp.runApp(menu);

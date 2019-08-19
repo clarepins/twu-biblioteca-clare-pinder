@@ -57,7 +57,7 @@ public class Menu {
     }
 
     private int receiveItemRef() {
-        System.out.println("Pls type in the book reference e.g. 2");
+        System.out.println("Pls type in the item reference e.g. 2");
         Scanner userInput = new Scanner(System.in);
         return userInput.nextInt();
     }
