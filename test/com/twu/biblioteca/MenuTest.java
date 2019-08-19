@@ -49,19 +49,27 @@ public class MenuTest {
     public void shouldGetMenuOptions() {
         String menuOptions = "\nBibliotecaApp menu - please select a number." +
                 "\n1. List of books" +
-                "\n2. Check out book" +
-                "\n3. Check in book" +
-                "\n4. Check out movie" +
-                "\n5. Check in movie" +
-                "\n6. Quit";
+                "\n2. List of movies" +
+                "\n3. Check out book" +
+                "\n4. Check in book" +
+                "\n5. Check out movie" +
+                "\n6. Check in movie" +
+                "\n7. Quit";
         assertThat(menu.getMenuOptions(), is(menuOptions));
     }
 
-//    @Test
-//    public void shouldGetAvailableBooksWhenOption1IsSelected() {
-//        String availableBooks = "1, testTitle, testAuthor, 1990\n2, testTitle, testAuthor, 1990";
-//        assertThat(menu.selectMenuOption(1), is(availableBooks));
-//    }
+    @Test
+    public void shouldGetAvailableBooksWhenOption1IsSelected() {
+        String availableBooks = "1, testTitle, testAuthor, 1990\n2, testTitle, testAuthor, 1990";
+        assertThat(menu.selectMenuOption(1), is(availableBooks));
+    }
+
+    @Test
+    public void shouldGetAvailableMoviesWhenOption1IsSelected() {
+        String availableMovies = "1, testName, testDirector, 1990, Rating: 7\n2, testName, testDirector, 1990, Rating: 10";
+        assertThat(menu.selectMenuOption(2), is(availableMovies));
+    }
+
 
 //    @Test
 //    public void shouldQuitWhenOption4IsSelected() {

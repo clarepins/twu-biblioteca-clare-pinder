@@ -7,11 +7,12 @@ public class Menu {
 
     static String menuOptions = "\nBibliotecaApp menu - please select a number." +
             "\n1. List of books" +
-            "\n2. Check out book" +
-            "\n3. Check in book" +
-            "\n4. Check out movie" +
-            "\n5. Check in movie" +
-            "\n6. Quit";
+            "\n2. List of movies" +
+            "\n3. Check out book" +
+            "\n4. Check in book" +
+            "\n5. Check out movie" +
+            "\n6. Check in movie" +
+            "\n7. Quit";
 
     public Menu(LibraryInventory libraryInventory) {
         this.libraryInventory = libraryInventory;
@@ -28,14 +29,17 @@ public class Menu {
                 menuAction = libraryInventory.getAvailableItems("book");
             break;
             case 2:
+                menuAction = libraryInventory.getAvailableItems("movie");
+            break;
+            case 3:
                 int itemRef = receiveBookRef();
                 menuAction = libraryInventory.checkOutItem("book", itemRef);
             break;
-            case 3:
+            case 4:
                 itemRef = receiveBookRef();
                 menuAction = libraryInventory.checkInItem("book", itemRef);
             break;
-            case 4:
+            case 7:
                 System.exit(0);
             break;
             default:
